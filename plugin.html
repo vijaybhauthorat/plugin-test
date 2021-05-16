@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<head>
+    <title>Wordpress form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+  display: flex;
+}
+
+form {
+  width: 100rem;
+  display: block;
+  margin: 3rem auto;
+  padding: 3rem;
+  border: 10px solid #999;
+}
+
+label {
+  display: block;
+  transform: translate(0, -2.75rem);
+  margin: -10px 0px;
+}
+
+input {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 0.25rem;
+  border: none;
+  border-bottom: 2px solid #111;
+  transition: border-color 0.2s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: green;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid white;
+  background-color: green;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 30px;
+  border-radius: 5px;
+}
+button:hover {
+    background-color: white;
+    color: green;
+    border: 2px solid green;
+}
+
+@supports (not (-ms-ime-align:auto)) {
+    label {
+      color: #999;
+      transform: translate(0.25rem, -1.5rem);
+      transition: all 0.2s ease-out;
+    }
+    
+    input:not(:placeholder-shown) + label {
+      color: green;
+      transform: translate(0, -2.75rem);
+    }
+}
+    </style>
+</head>
+<html>
+<body>
+    <form action="">
+        <h2>Hippo API Word Press Plugin Form</h2>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" >
+                <input type="text" id="firstName" name="firstName" placeholder=" ">
+                <label for="firstName">First Name</label>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <input type="text" id="middleName" name="middleName" placeholder=" ">
+                <label for="middleName">Middle Name</label>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" >
+                <input type="text" id="lastName" name="lastName" placeholder=" ">
+                <label for="lastName">Last Name</label>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12" >
+                <input type="text" id="streetAddress" name="streetAddress" placeholder=" ">
+                <label for="streetAddress">Street Address</label>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" >
+                <input type="text" id="unit" name="unit" placeholder=" ">
+                <label for="unit">Unit</label>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" >
+                <input type="text" id="city" name="city" placeholder=" ">
+                <label for="city">City</label>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <input type="text" id="state" name="state" placeholder=" ">
+                <label for="state">State</label>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" >
+                <input type="text" id="zipCode" name="zipCode" placeholder=" ">
+                <label for="zipCode">Zip Code</label>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                <input type="date" id="dob" name="dob" placeholder=" ">
+                <label for="dob">Date of Birth</label>
+            </div>
+         
+
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" >
+                <input type="tel" id="telphone" name="telphone" placeholder=" ">
+                <label for="telphone">Phone Number</label>
+            </div>
+         
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" >
+                <input type="email" id="email" name="email" placeholder=" ">
+                <label for="email">Email</label>
+            </div>
+         
+
+        </div>
+        <button type="button">Submit</button>
+      </form>
+      <script>
+          fetch('https://api.staging.myhippo.io/v1/herd/quote?auth_token=zcXbR1NoE0zoozyuqAa75s5gBATbeiUsbkGhvb5toGiNWUdDjIUkAU5XgDwCRTet&street=435%20Homer%20Ave&city=Palo%20Alto&state=CA&zip=94301&first_name=John&last_name=Gill&email=Test%40test.com&phone=7869885582&date_of_birth=05061979', { mode: 'no-cors'})
+  .then(response => response)
+  .then(data => {
+    // Here's a list of repos!
+
+    console.log(data)
+  });
+      </script>
+</body>
+</html>
